@@ -1,0 +1,332 @@
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    font-weight: bold;
+    margin: -10px;
+}
+.wrapper > * {
+    flex: 1 100%;
+
+}
+.nameMounth{
+    background: #0B3157;
+    width: 375px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.btnMounthPrew{
+    color: #48C1C2;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    text-align: left;
+    background: transparent;
+    border: none;
+}
+.btnMounthNext{
+    color: #48C1C2;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    text-align: left;
+    background: transparent;
+    border: none;
+    padding-left: 16px;
+}
+.btnMounthCenter{
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 19px;
+    text-align: center;
+    background: transparent;
+    border: none;
+}
+.nameDaysOfTheWeek{
+    background: #0B3157;
+    width: 375px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.nameDaysOfTheWeek >div{
+    text-align: center;
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    opacity: 0.5;
+}
+.days{
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+}
+.days >div{
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.current-day {
+    width: 3px;
+    height: 3px;
+    background-color: red;
+    position: absolute;
+    top: 6px;
+}
+
+.selected-day {
+    background-color: #0B3157;
+    border-radius: 4px;
+    color: white;
+}
+
+.event-short {
+    background-color: #48C1C2;
+    border-radius: 6px;
+    width: 24px;
+    height: 3px;
+    position: absolute;
+    bottom: 6px;
+}
+
+.event-not {
+    background-color: #BAD1CD;
+    border-radius: 6px;
+    width: 24px;
+    height: 3px;
+    position: absolute;
+    bottom: 6px;
+}
+.disp{
+    display: flex;
+}
+.event-short-two{
+    background-color: #48C1C2;
+    border-radius: 6px;
+    width: 10px;
+    height: 3px;
+    position: absolute;
+    bottom: 6px;
+}
+.event-no-two{
+    background-color: #BAD1CD;
+    border-radius: 6px;
+    width: 10px;
+    height: 3px;
+    position: absolute;
+    bottom: 6px;
+}
+.event-day{
+    background-size: 100%;
+    border-radius: 2px;
+    width: 375px;
+    height: 193px;
+    box-shadow: #000000;
+}
+.textNameTask{
+    color: #0B3157;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+    line-height: 17px;
+    width: 343px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.task1{
+    background-size: 100%;
+    border-radius: 2px;
+    width: 375px;
+    height: 193px;
+}
+.img-overlay{
+    background: rgba(131, 128, 128, 0.9);
+    width: 100%;
+    height: 100%;
+    display: inline-grid;
+}
+.text-in-ovrlay{
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 24px;
+}
+.nameTask{
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    display: flex;
+}
+.nameTask1{
+    color: #BAD1CD;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    line-height: 20px;
+    display: flex;
+}
+
+.box{
+    display:flex;
+    padding-top: 35px;
+    justify-content: space-between;
+}
+.box1{
+    display:flex;
+}
+.timeTask{
+    background-color: #48C1C2;
+    border-radius: 2px;
+    opacity: 0.800000011920929;
+    width: 78px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 700;
+}
+.locationTask{
+    color: #BAD1CD;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.3px;
+    line-height: 22px;
+    width: 154px;
+}
+.lable-lokation{
+    border: 2px solid #E6EAEE;
+    width: 16px;
+    height: 19px;
+}
+.box-task {
+    background-color: #48C1C2;
+    border-radius: 0 0 2px 2px;
+    opacity: 0.800000011920929;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+.testYes{
+    display: flex;
+}
+.taskYesOrNow{
+    border: 3px solid #FFFFFF;
+    width: 8px;
+    height: 13px;
+}
+.taskYesOrNowText{
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    opacity: 0.6000000238418579;
+    padding-left: 16px;
+}
+.taskNo{
+    border: 2px solid #FFFFFF;
+    opacity: 0.6000000238418579;
+    width: 11.31px;
+    height: 5.66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.task2{
+    color: #0B3157;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 14px;
+    opacity: 0.300000011920929;
+    width: 343px;
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+.task2-1{
+    background-color: #45B4B7;
+    border-radius: 2px;
+    width: 359px;
+    height: 60px;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: grid;
+    align-content: center;
+}
+.task2-1TimePract{
+    display: flex;
+    justify-content: space-between;
+}
+.task2-1Practic{
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    line-height: 17px;
+    opacity: 0.5;
+}
+.task2-1Time{
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    line-height: 17px;
+    opacity: 0.5;
+    width: 171px;
+    text-align: right;
+}
+.task2-1Scope{
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    line-height: 19px;
+    width: 260px;
+    text-align: left;
+}
+.task2-2{
+    background-color: #0B3157;
+    border-radius: 2px;
+    opacity: 0.5;
+    width: 359px;
+    height: 60px;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: grid;
+    align-content: center;
+}
+.otstup{
+    height: 4px;
+}
