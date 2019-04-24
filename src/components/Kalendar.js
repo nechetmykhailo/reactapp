@@ -19,11 +19,6 @@ class Kalendar extends Component{
         this.setState({
             cuurMounth: this.state.cuurMounth + nextPrevWeek
         });
-
-        // console.log("start "+moment().startOf("month").startOf("isoWeek").isoWeek());
-        // console.log("end"+ moment().endOf("month").endOf("isoWeek").isoWeek());
-        //
-        // console.log(">>>> "+this.state.cuurMounth);
     };
 
     render() {

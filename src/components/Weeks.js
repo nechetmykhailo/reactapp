@@ -4,6 +4,15 @@ import moment from "moment"
 
 
 class Weeks extends Component {
+    constructor(props){
+        super(props);
+        this.state={
+            active: false
+        };
+
+        this.MyClick = this.MyClick.bind(this);
+    }
+
     render() {
 
         let getClick = this.props.cuurMounth - 3;
@@ -12,19 +21,30 @@ class Weeks extends Component {
         const renderDays = () => {
             const days = [];
 
+            const currentState = this.state.active ? "selected-day" : "";
+
             for(let i = 0; i < 7; i++) {
-                console.log(moment().add(getClick, "month").daysInMonth());
+                let allDays = moment().day(i).week(startMounth).format("D");
+
+                let currDay = moment().format("D");
+
+                // let startMonth = allDays.indexOf("1");
+                let startMonth = allDays.slice(allDays[0], allDays.indexOf(moment().daysInMonth()));
+                let end = moment().daysInMonth();
+                let endMonth = allDays.indexOf(end);
+
+                // console.log("start " + startMonth);
+                console.log("end " + allDays);
 
                 days.push(
-                    <div key={i} onClick={this.MyClick}>
+                    <div key={i} onClick={this.MyClick} className={currentState}>
                         {
-                            moment().day(i).week(startMounth).format("D")
+                            allDays
                         }
                     </div>
 
                 );
             }
-
             ++startMounth;
             return days;
         };
@@ -38,10 +58,6 @@ class Weeks extends Component {
             let endMounyh = moment().endOf("month").endOf("isoWeek").add(getClick, "month").isoWeek();
 
             let currNumberMounth = endMounyh-startMounth+1;
-
-            // console.log("start " + startMounth);
-            // console.log("end " + endMounyh);
-            // console.log("sum " + currNumberMounth);
 
             for(let i=0; i<currNumberMounth; i++){
                 weeks.push(
@@ -64,6 +80,11 @@ class Weeks extends Component {
 
     MyClick(){
 
+        this.setState({
+            active: !this.state.active
+        });
+
+        console.log(this.state.active);
     }
 }
 
